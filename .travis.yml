@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- 8
+- 6
+after_success:
+- npm run build
+deploy:
+  local-dir: "build"
+  provider: pages
+  skip-cleanup: true
+  github-token: "$GITHUB_TOKEN"
+  keep-history: true
+  on:
+    branch: master
+env:
+  global:
+    secure: ATWj4P56Nt8reFPTYrOE3/egfrO9e7k3v8zF5WEBBiZY2lZKjtuVXQZmXwNpHbqOjQ0SJ+3/qC9nMr++JHOqkHyaYfI30MY6gUlTgm45Yo05Y+yV96/TfrfnIyfqKmtF5GV+Z3gO/XGV4C7acJEylRIH/7NBS9uClx4VRWwVqvNlCXJa1IODNmCeKNygv9e5FOjWNfPLqrovkA8wIDVmnXyDx7nxsAgDtr8kJSwPwTpH75UVrEvzt6V3EQHL25z36L28vLypACfvg/s1iPvl/yh32P4Mfxh9ZR8O6obVZQz1eec+Mur0/x9MvuF6Q0CokkdGWSkYf6FXPKdeLavBxpUfCbPcIuI6xegne0b6MX/Od9UU4X822aIgyWxJadLRfn9yDNdLRm5MO5eNdVhXyww8uy48ewCOKF4+b0CucrvaqJRVKVSsycqvZBuC3URLOYPgq3og462GQxhhOepsL06TNgtwF1gB+RXKkBvCgkcw8VEy6n9d9vFAc6YygRjsnyWKuPDDkjeXm+YkuFYOUNyAggrpXaRO/qs/7heVM3KUoZLQN3eA3rqMe70HhYN85DUJ2HmfiRp+Yp9fdIsXvlSpz0mCyrx2t6s30U66NBwkGraA/gS//joYHx3UjSyr0bfpMw6dlXh1KjrwdjXFXczKLr9wPSxSBfV8W7SrWSo=
