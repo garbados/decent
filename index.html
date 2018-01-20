@@ -20415,34 +20415,51 @@ utils.intFromLE = intFromLE;
 module.exports={
   "_args": [
     [
-      "elliptic@6.4.0",
-      "/home/travis/build/garbados/decent"
+      {
+        "raw": "elliptic@^6.0.0",
+        "scope": null,
+        "escapedName": "elliptic",
+        "name": "elliptic",
+        "rawSpec": "^6.0.0",
+        "spec": ">=6.0.0 <7.0.0",
+        "type": "range"
+      },
+      "/home/travis/build/garbados/decent/node_modules/browserify-sign"
     ]
   ],
-  "_development": true,
-  "_from": "elliptic@6.4.0",
+  "_from": "elliptic@>=6.0.0 <7.0.0",
   "_id": "elliptic@6.4.0",
-  "_inBundle": false,
-  "_integrity": "sha1-ysmvh2LIWDYYcAPI3+GT5eLq5d8=",
+  "_inCache": true,
   "_location": "/elliptic",
+  "_nodeVersion": "7.0.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/elliptic-6.4.0.tgz_1487798866428_0.30510620190761983"
+  },
+  "_npmUser": {
+    "name": "indutny",
+    "email": "fedor@indutny.com"
+  },
+  "_npmVersion": "3.10.8",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "elliptic@6.4.0",
-    "name": "elliptic",
+    "raw": "elliptic@^6.0.0",
+    "scope": null,
     "escapedName": "elliptic",
-    "rawSpec": "6.4.0",
-    "saveSpec": null,
-    "fetchSpec": "6.4.0"
+    "name": "elliptic",
+    "rawSpec": "^6.0.0",
+    "spec": ">=6.0.0 <7.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/browserify-sign",
     "/create-ecdh"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
-  "_spec": "6.4.0",
-  "_where": "/home/travis/build/garbados/decent",
+  "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
+  "_shrinkwrap": null,
+  "_spec": "elliptic@^6.0.0",
+  "_where": "/home/travis/build/garbados/decent/node_modules/browserify-sign",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -20476,9 +20493,15 @@ module.exports={
     "jshint": "^2.6.0",
     "mocha": "^2.1.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
+    "tarball": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz"
+  },
   "files": [
     "lib"
   ],
+  "gitHead": "6b0d2b76caae91471649c8e21f0b1d3ba0f96090",
   "homepage": "https://github.com/indutny/elliptic",
   "keywords": [
     "EC",
@@ -20488,7 +20511,15 @@ module.exports={
   ],
   "license": "MIT",
   "main": "lib/elliptic.js",
+  "maintainers": [
+    {
+      "name": "indutny",
+      "email": "fedor@indutny.com"
+    }
+  ],
   "name": "elliptic",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/indutny/elliptic.git"
@@ -23578,395 +23609,423 @@ module.exports = isElectron;
 		exports["isVisible"] = factory();
 	else
 		root["isVisible"] = factory();
-})(this, function() {
+})(typeof self !== 'undefined' ? self : this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-
+/******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
 /******/ 		};
-
+/******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
+/******/
 /******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-
+/******/ 		module.l = true;
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-
-
+/******/
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-
+/******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+"use strict";
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.isVisible = isVisible;
-	exports.isVisibleAll = isVisibleAll;
-	exports.isVisibleAny = isVisibleAny;
 
-	var _iselement = __webpack_require__(1);
-
-	var _iselement2 = _interopRequireDefault(_iselement);
-
-	var _styleProperties = __webpack_require__(2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// cross-browser way of getting element's style property
-	function getStyle(element, property) {
-	  if (window.getComputedStyle) {
-	    return (0, _styleProperties.getStyleProperty)(element, property).original;
-	  } else if (element.currentStyle) {
-	    return element.currentStyle[property];
-	  }
-	  return null;
-	}
-
-	function checkVisibility(element) {
-	  var is_displayed = getStyle(element, 'display') !== 'none';
-	  var is_visible = getStyle(element, 'visibility') !== 'hidden';
-
-	  return is_displayed && is_visible;
-	}
-
-	function isVisible(element) {
-	  // don't bother with non-element inputs
-	  if (!(0, _iselement2.default)(element)) {
-	    return false;
-	  }
-
-	  // This should prevent problems with ShadowDOMPolyfill. It returns different
-	  // object when asking directly via `document.body` (native element) and when
-	  // asking via `document.querySelector()` (wrapped element). This would result
-	  // in traversing too far in the `while` cycle below.
-	  var body_element = document.querySelector('body');
-	  var html_element = document.querySelector('html');
-
-	  // elements that are not inserted into the body are never visible
-	  if (!body_element || !body_element.contains(element)) {
-	    return false;
-	  }
-
-	  // test visibility recursively for element and all its parents, until BODY
-	  while (element && element !== body_element && element !== html_element) {
-	    if (!checkVisibility(element)) {
-	      return false;
-	    }
-	    element = element.parentNode;
-	  }
-
-	  return true;
-	}
-
-	function isVisibleAll(list) {
-	  for (var i = 0; i < list.length; i++) {
-	    if (!isVisible(list[i])) {
-	      return false;
-	    }
-	  }
-	  return true;
-	}
-
-	function isVisibleAny(list) {
-	  for (var i = 0; i < list.length; i++) {
-	    if (isVisible(list[i])) {
-	      return true;
-	    }
-	  }
-	  return false;
-	}
-
-	exports.default = isVisible;
-
-/***/ },
-/* 1 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-	exports.default = function (input) {
-	  return input != null && (typeof input === 'undefined' ? 'undefined' : _typeof(input)) === 'object' && input.nodeType === 1 && _typeof(input.style) === 'object' && _typeof(input.ownerDocument) === 'object';
-	};
-
-	var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-	  return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
-	} : function (obj) {
-	  return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
-	};
-
-	/**
-	 * Returns `true` if provided input is Element.
-	 * @name isElement
-	 * @param {*} [input]
-	 * @returns {boolean}
-	 */
-
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.getStyleProperty = getStyleProperty;
-	exports.getStyleProperties = getStyleProperties;
-
-	var _changeCase = __webpack_require__(3);
-
-	var _parsePropertyValue = __webpack_require__(4);
-
-	var _parsePropertyValue2 = _interopRequireDefault(_parsePropertyValue);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @typedef {Object} StyleProperty
-	 * @property {string} unit - unit of the property, e.g. px, rgb
-	 * @property {string|number} value - value of the property
-	 * @property {string} output - valid string representation of value and unit
-	 *
-	 * @example <caption>Simple property.</caption>
-	 * {
-	 *   unit: 'px',
-	 *   value: 100,
-	 *   output: '100px'
-	 * }
-	 *
-	 * @example <caption>Color property.</caption>
-	 * {
-	 *   unit: 'rgb',
-	 *   value: [255, 255, 255],
-	 *   output: '#ffffff'
-	 * }
-	 */
-
-	/**
-	 * Attempts to fix the element when using Webcomponents with ShadowDOMPolyfill. It returns either original element or wrapped element, depending on whether the polyfill replaced the original `getComputedStyle` method or not.
-	 * This is madness and no sane person should ever do hacks like this. ShadowDOMPolyfill sucks donkey balls!
-	 * @param {Object|HTMLElement} element
-	 * @returns {Object|HTMLElement}
-	 */
-	function fixWebcomponentsElement(element) {
-	  if (typeof window.ShadowDOMPolyfill !== 'undefined') {
-
-	    var is_native = document.defaultView.getComputedStyle.toString().indexOf('[native code]') !== -1;
-
-	    // Can't check if element is instance of HTMLElement, because the polyfill
-	    // hijacks this. Only reliable way of checking if it is wrapped I found
-	    // is using this ugly ass property.
-	    var is_wrapped = typeof element.__impl4cf1e782hg__ !== 'undefined';
-
-	    if (is_native && is_wrapped) {
-	      element = window.ShadowDOMPolyfill.unwrap(element);
-	    }
-
-	    if (!is_native && !is_wrapped) {
-	      element = window.ShadowDOMPolyfill.wrap(element);
-	    }
-	  }
-
-	  return element;
-	}
-
-	/**
-	 * Returns information about unit and value of given property for given element.
-	 * @param {HTMLElement} element
-	 * @param {string} property - Name of the property. You can use either camelCase (e.g. zIndex) or kebab-case (e.g. z-index).
-	 * @returns {StyleProperty}
-	 *
-	 * @example
-	 * var element_width = getStyleProperty(my_element, 'width');
-	 * // returns {unit: 'px', value: 100, output: '100px'}
-	 */
-	function getStyleProperty(element, property) {
-	  property = (0, _changeCase.toKebabCase)(property);
-	  element = fixWebcomponentsElement(element);
-	  var value = document.defaultView.getComputedStyle(element, null).getPropertyValue(property);
-	  return (0, _parsePropertyValue2.default)(value);
-	}
-
-	/**
-	 * Returns information about multiple properties of given element.
-	 * @param {HTMLElement} element
-	 * @param {Array|string} properties - List of properties. Single property (string) will be converted to an array.
-	 * @returns {Object} - Keys of the returned objects are property names, values are objects containing information about given property.
-	 *
-	 * @example
-	 * var element_size = getStyleProperties(my_element, ['width', 'height']);
-	 * // returns
-	 * // {
-	 * //   width: {unit: 'px', value: 100, output: '100px'},
-	 * //   height: {unit: 'px', value: 100, output: '100px'}
-	 * // }
-	 */
-	function getStyleProperties(element) {
-	  var properties = arguments.length <= 1 || arguments[1] === undefined ? [] : arguments[1];
-
-	  if (typeof properties === 'string') {
-	    properties = [properties];
-	  }
-
-	  var result = {};
-
-	  properties.forEach(function (property) {
-	    result[property] = getStyleProperty(element, property);
-	  });
-
-	  return result;
-	}
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.toCamelCase = toCamelCase;
-	exports.toKebabCase = toKebabCase;
-	var delimiters = [' ', '-', '_'];
-
-	function toCamelCase() {
-	  var input = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
-
-	  var characters = input.split('');
-	  var result = [];
-
-	  var character = void 0;
-	  while (character = characters.shift()) {
-	    if (delimiters.indexOf(character) !== -1) {
-	      if (character = characters.shift()) {
-	        character = character.toUpperCase();
-	      }
-	    }
-	    result.push(character);
-	  }
-
-	  return result.join('');
-	}
-
-	function toKebabCase() {
-	  var input = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
-
-	  var characters = input.split('');
-	  var result = [];
-
-	  characters.forEach(function (character) {
-	    var lowercase_character = character.toLowerCase();
-	    if (character !== lowercase_character) {
-	      result.push('-', lowercase_character);
-	    } else if (delimiters.indexOf(character) !== -1) {
-	      result.push('-');
-	    } else {
-	      result.push(character);
-	    }
-	  });
-
-	  return result.join('');
-	}
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	exports.default = function (value) {
-	  var result = re_color.test(value) ? parseColorProperty(value) : parseRegularProperty(value);
-	  result.original = value;
-	  return result;
-	};
-
-	var re_color = /^rgb\((\d+),\s?(\d+),\s?(\d+)\)$/;
-	var re_prop = /^(-?\d*\.?\d*)(.*)$/;
-
-	// converts number in base 10 to base 16, adds padding zero if needed
-	function convertColorComponent(input) {
-	  var result = input.toString(16);
-	  if (result.length < 2) {
-	    result = '0' + result;
-	  }
-	  return result;
-	}
-
-	function parseColorProperty(value) {
-	  var matches = value.match(re_color);
-	  var result = {};
-
-	  result.unit = 'rgb';
-
-	  result.value = [parseInt(matches[1], 10), parseInt(matches[2], 10), parseInt(matches[3], 10)];
-
-	  result.output = '#' + convertColorComponent(result.value[0]) + convertColorComponent(result.value[1]) + convertColorComponent(result.value[2]);
-
-	  return result;
-	}
-
-	function parseRegularProperty(value) {
-	  var result = {
-	    unit: '',
-	    value: null,
-	    output: 'auto'
-	  };
-
-	  if (value !== 'auto') {
-	    var matches = value.match(re_prop);
-	    result.value = parseFloat(matches[1]);
-	    result.unit = matches[2];
-	    result.output = result.value + result.unit;
-	  }
-
-	  return result;
-	}
-
-/***/ }
-/******/ ])
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
-;
+exports.isVisible = isVisible;
+exports.isVisibleAll = isVisibleAll;
+exports.isVisibleAny = isVisibleAny;
+
+var _iselement = __webpack_require__(1);
+
+var _iselement2 = _interopRequireDefault(_iselement);
+
+var _styleProperties = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// cross-browser way of getting element's style property
+function getStyle(element, property) {
+  if (window.getComputedStyle) {
+    return (0, _styleProperties.getStyleProperty)(element, property).original;
+  } else if (element.currentStyle) {
+    return element.currentStyle[property];
+  }
+  return null;
+}
+
+function isVisible(element) {
+  // don't bother with non-element inputs
+  if (!(0, _iselement2.default)(element)) {
+    return false;
+  }
+
+  // This should prevent problems with ShadowDOMPolyfill. It returns different
+  // object when asking directly via `document.body` (native element) and when
+  // asking via `document.querySelector()` (wrapped element). This would result
+  // in traversing too far in the `while` cycle below.
+  var body_element = document.querySelector('body');
+  var html_element = document.querySelector('html');
+
+  // elements that are not inserted into the body are never visible
+  if (!body_element || !body_element.contains(element)) {
+    return false;
+  }
+
+  // invisible elements
+  if (getStyle(element, 'visibility') === 'hidden') {
+    return false;
+  }
+
+  // test display property recursively for element and all its parents, until BODY
+  while (element && element !== body_element && element !== html_element) {
+    if (getStyle(element, 'display') === 'none') {
+      return false;
+    }
+    if (getStyle(element, 'opacity').toString() === '0') {
+      return false;
+    }
+    element = element.parentNode;
+  }
+
+  return true;
+}
+
+function isVisibleAll(list) {
+  for (var i = 0; i < list.length; i++) {
+    if (!isVisible(list[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function isVisibleAny(list) {
+  for (var i = 0; i < list.length; i++) {
+    if (isVisible(list[i])) {
+      return true;
+    }
+  }
+  return false;
+}
+
+exports.default = isVisible;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.default = function (input) {
+  return input != null && (typeof input === 'undefined' ? 'undefined' : _typeof(input)) === 'object' && input.nodeType === 1 && _typeof(input.style) === 'object' && _typeof(input.ownerDocument) === 'object';
+};
+
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+  return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+};
+
+/**
+ * Returns `true` if provided input is Element.
+ * @name isElement
+ * @param {*} [input]
+ * @returns {boolean}
+ */
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getStyleProperty = getStyleProperty;
+exports.getStyleProperties = getStyleProperties;
+
+var _changeCase = __webpack_require__(3);
+
+var _parsePropertyValue = __webpack_require__(4);
+
+var _parsePropertyValue2 = _interopRequireDefault(_parsePropertyValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * @typedef {Object} StyleProperty
+ * @property {string} unit - unit of the property, e.g. px, rgb
+ * @property {string|number} value - value of the property
+ * @property {string} output - valid string representation of value and unit
+ *
+ * @example <caption>Simple property.</caption>
+ * {
+ *   unit: 'px',
+ *   value: 100,
+ *   output: '100px'
+ * }
+ *
+ * @example <caption>Color property.</caption>
+ * {
+ *   unit: 'rgb',
+ *   value: [255, 255, 255],
+ *   output: '#ffffff'
+ * }
+ */
+
+/**
+ * Attempts to fix the element when using Webcomponents with ShadowDOMPolyfill. It returns either original element or wrapped element, depending on whether the polyfill replaced the original `getComputedStyle` method or not.
+ * This is madness and no sane person should ever do hacks like this. ShadowDOMPolyfill sucks donkey balls!
+ * @param {Object|HTMLElement} element
+ * @returns {Object|HTMLElement}
+ */
+function fixWebcomponentsElement(element) {
+  if (typeof window.ShadowDOMPolyfill !== 'undefined') {
+
+    var is_native = document.defaultView.getComputedStyle.toString().indexOf('[native code]') !== -1;
+
+    // Can't check if element is instance of HTMLElement, because the polyfill
+    // hijacks this. Only reliable way of checking if it is wrapped I found
+    // is using this ugly ass property.
+    var is_wrapped = typeof element.__impl4cf1e782hg__ !== 'undefined';
+
+    if (is_native && is_wrapped) {
+      element = window.ShadowDOMPolyfill.unwrap(element);
+    }
+
+    if (!is_native && !is_wrapped) {
+      element = window.ShadowDOMPolyfill.wrap(element);
+    }
+  }
+
+  return element;
+}
+
+/**
+ * Returns information about unit and value of given property for given element.
+ * @param {HTMLElement} element
+ * @param {string} property - Name of the property. You can use either camelCase (e.g. zIndex) or kebab-case (e.g. z-index).
+ * @returns {StyleProperty}
+ *
+ * @example
+ * var element_width = getStyleProperty(my_element, 'width');
+ * // returns {unit: 'px', value: 100, output: '100px'}
+ */
+function getStyleProperty(element, property) {
+  property = (0, _changeCase.toKebabCase)(property);
+  element = fixWebcomponentsElement(element);
+  var value = document.defaultView.getComputedStyle(element, null).getPropertyValue(property);
+  return (0, _parsePropertyValue2.default)(value);
+}
+
+/**
+ * Returns information about multiple properties of given element.
+ * @param {HTMLElement} element
+ * @param {Array|string} properties - List of properties. Single property (string) will be converted to an array.
+ * @returns {Object} - Keys of the returned objects are property names, values are objects containing information about given property.
+ *
+ * @example
+ * var element_size = getStyleProperties(my_element, ['width', 'height']);
+ * // returns
+ * // {
+ * //   width: {unit: 'px', value: 100, output: '100px'},
+ * //   height: {unit: 'px', value: 100, output: '100px'}
+ * // }
+ */
+function getStyleProperties(element) {
+  var properties = arguments.length <= 1 || arguments[1] === undefined ? [] : arguments[1];
+
+  if (typeof properties === 'string') {
+    properties = [properties];
+  }
+
+  var result = {};
+
+  properties.forEach(function (property) {
+    result[property] = getStyleProperty(element, property);
+  });
+
+  return result;
+}
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.toCamelCase = toCamelCase;
+exports.toKebabCase = toKebabCase;
+var delimiters = [' ', '-', '_'];
+
+function toCamelCase() {
+  var input = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+
+  var characters = input.split('');
+  var result = [];
+
+  var character = void 0;
+  while (character = characters.shift()) {
+    if (delimiters.indexOf(character) !== -1) {
+      if (character = characters.shift()) {
+        character = character.toUpperCase();
+      }
+    }
+    result.push(character);
+  }
+
+  return result.join('');
+}
+
+function toKebabCase() {
+  var input = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+
+  var characters = input.split('');
+  var result = [];
+
+  characters.forEach(function (character) {
+    var lowercase_character = character.toLowerCase();
+    if (character !== lowercase_character) {
+      result.push('-', lowercase_character);
+    } else if (delimiters.indexOf(character) !== -1) {
+      result.push('-');
+    } else {
+      result.push(character);
+    }
+  });
+
+  return result.join('');
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (value) {
+  var result = re_color.test(value) ? parseColorProperty(value) : parseRegularProperty(value);
+  result.original = value;
+  return result;
+};
+
+var re_color = /^rgb\((\d+),\s?(\d+),\s?(\d+)\)$/;
+var re_prop = /^(-?\d*\.?\d*)(.*)$/;
+
+// converts number in base 10 to base 16, adds padding zero if needed
+function convertColorComponent(input) {
+  var result = input.toString(16);
+  if (result.length < 2) {
+    result = '0' + result;
+  }
+  return result;
+}
+
+function parseColorProperty(value) {
+  var matches = value.match(re_color);
+  var result = {};
+
+  result.unit = 'rgb';
+
+  result.value = [parseInt(matches[1], 10), parseInt(matches[2], 10), parseInt(matches[3], 10)];
+
+  result.output = '#' + convertColorComponent(result.value[0]) + convertColorComponent(result.value[1]) + convertColorComponent(result.value[2]);
+
+  return result;
+}
+
+function parseRegularProperty(value) {
+  var result = {
+    unit: '',
+    value: null,
+    output: 'auto'
+  };
+
+  if (value !== 'auto') {
+    var matches = value.match(re_prop);
+    result.value = parseFloat(matches[1]);
+    result.unit = matches[2];
+    result.output = result.value + result.unit;
+  }
+
+  return result;
+}
+
+/***/ })
+/******/ ]);
+});
 },{}],211:[function(require,module,exports){
 var toString = {}.toString;
 
@@ -25610,6 +25669,7 @@ module.exports = function (opts) {
 var WS = require('pull-ws')
 var URL = require('url')
 var pull = require('pull-stream/pull')
+var Map = require('pull-stream/throughs/map')
 
 module.exports = function (opts) {
   opts = opts || {}
@@ -25640,7 +25700,7 @@ module.exports = function (opts) {
         binaryType: opts.binaryType,
         onConnect: function (err) {
           //ensure stream is a stream of node buffers
-          stream.source = pull(stream.source, pull.map(Buffer))
+          stream.source = pull(stream.source, Map(Buffer))
           cb(err, stream)
         }
       })
@@ -25674,7 +25734,7 @@ module.exports = function (opts) {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":99,"pull-stream/pull":330,"pull-ws":364,"url":445}],233:[function(require,module,exports){
+},{"buffer":99,"pull-stream/pull":330,"pull-stream/throughs/map":352,"pull-ws":364,"url":445}],233:[function(require,module,exports){
 'use strict';
 var EventEmitter = require('events').EventEmitter
 var u = require('./util')
@@ -25692,7 +25752,7 @@ function noop (err) {
   if (err) throw explain(err, 'callback not provided')
 }
 
-module.exports = function (path, remoteApi, _remoteCall) {
+module.exports = function (path, remoteApi, _remoteCall, bootstrap) {
 
   var emitter = new EventEmitter()
 
@@ -25706,8 +25766,8 @@ module.exports = function (path, remoteApi, _remoteCall) {
     return value
   }
 
-  //add all the api methods to emitter recursively
-  ;(function recurse (obj, api, path) {
+  //add all the api methods to the emitter recursively
+  function recurse (obj, api, path) {
     for(var name in api) (function (name, type) {
       var _path = path ? path.concat(name) : [name]
       obj[name] =
@@ -25718,14 +25778,24 @@ module.exports = function (path, remoteApi, _remoteCall) {
           }
     })(name, api[name])
     return obj
-  })(emitter, remoteApi, path)
+  }
+
+  if (bootstrap) {
+    remoteCall('async', 'manifest', [function (err, remote) {
+      if(err)
+        return bootstrap(err)
+      recurse(emitter, remote, path)
+      bootstrap(null, remote, emitter)
+    }])
+  } else {
+    recurse(emitter, remoteApi, path)
+  }
 
   //legacy local emit, from when remote emit was supported.
   emitter._emit = emitter.emit
 
   return emitter
 }
-
 
 },{"./util":239,"events":176,"explain-error":178}],234:[function(require,module,exports){
 'use strict'
@@ -25736,6 +25806,12 @@ var createApi    = require('./api')
 var createLocalCall = require('./local-api')
 
 function createMuxrpc (remoteApi, localApi, local, id, perms, codec, legacy) {
+  var bootstrap
+  if ('function' === typeof remoteApi) {
+    bootstrap = remoteApi
+    remoteApi = {}
+  }
+
   localApi = localApi || {}
   remoteApi = remoteApi || {}
   var emitter
@@ -25743,7 +25819,6 @@ function createMuxrpc (remoteApi, localApi, local, id, perms, codec, legacy) {
 
   //pass the manifest to the permissions so that it can know
   //what something should be.
-
   var _cb, ws
   var context = {
       _emit: function (event, value) {
@@ -25768,7 +25843,7 @@ function createMuxrpc (remoteApi, localApi, local, id, perms, codec, legacy) {
   emitter = createApi([], remoteApi, function (type, name, args, cb) {
     if(ws.closed) throw new Error('stream is closed')
     return ws.remoteCall(type, name, args, cb)
-  })
+  }, bootstrap)
 
   if(legacy) {
     Object.__defineGetter__.call(emitter, 'id', function () {
@@ -25801,7 +25876,6 @@ function createMuxrpc (remoteApi, localApi, local, id, perms, codec, legacy) {
   }
 
   return emitter
-
 }
 
 module.exports = function (remoteApi, localApi, codec) {
@@ -25811,7 +25885,6 @@ module.exports = function (remoteApi, localApi, codec) {
     return createMuxrpc(remoteApi, localApi, local, id, perms, codec, true)
   }
 }
-
 
 },{"./api":233,"./local-api":235,"./stream":238,"./util":239,"packet-stream-codec":244}],235:[function(require,module,exports){
 
@@ -29872,10 +29945,8 @@ function pullPushable (separated, onClose) {
       callback(abort, data)
       return
     }
-    // otherwise push data and
-    // attempt to drain
+    // otherwise buffer data
     buffer.push(data)
-    drain()
   }
 
   // Return functions separated from source { push, end, source }
@@ -31570,7 +31641,7 @@ exports.encode = exports.stringify = require('./encode');
 'use strict'
 
 function oldBrowser () {
-  throw new Error('secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11')
+  throw new Error('Secure random number generation is not supported by this browser.\nUse Chrome, Firefox or Internet Explorer 11')
 }
 
 var Buffer = require('safe-buffer').Buffer
@@ -34586,7 +34657,7 @@ exports.serverVerifyAuth = function (state, data) {
     return null
 
   var sig = state.remote.hello.slice(0, 64)
-  var publicKey = state.remote.hello.slice(64, exports.client_auth_length)
+  var publicKey = state.remote.hello.slice(64, 96)
 
   var signed = concat([state.app_key, state.local.publicKey, state.shash])
   if(!verify(sig, signed, publicKey))
@@ -37364,7 +37435,7 @@ var inline = {
   del: noop,
   emoji: noop,
   mention: /^(\s)?([@%&][A-Za-z0-9\._\-+=\/]*[A-Za-z0-9_\-+=\/])/,
-  hashtag: /^(\s)?(#[^\d ][^\s,.\(\)\[\]"]+)/,
+  hashtag: /^(\s)?(#[^\d ][^\s,.\(\)\[\]"\?!<>'`^]+)/,
   text: /^[\s\S]+?(?=[\\<!\[_*`]| {2,}\n| [@%&#]|$)/
 };
 
@@ -38546,6 +38617,13 @@ exports.relationsTo = function (msgA, msgB) {
 },{"ssb-ref":424}],424:[function(require,module,exports){
 var isDomain = require('is-valid-domain')
 var ip = require('ip')
+var protocolRegex = /^(net|wss?|onion)$/
+var linkRegex = exports.linkRegex = /^(@|%|&)[A-Za-z0-9\/+]{43}=\.[\w\d]+$/
+var feedIdRegex = exports.feedIdRegex = /^@[A-Za-z0-9\/+]{43}=\.(?:sha256|ed25519)$/
+var msgIdRegex = exports.msgIdRegex = /^%[A-Za-z0-9\/+]{43}=\.sha256$/
+var blobIdRegex = exports.blobIdRegex = /^&[A-Za-z0-9\/+]{43}=\.sha256$/
+var multiServerAddressRegex = /^\w+\:.+~shs\:/
+var extractRegex = /([@%&][A-Za-z0-9\/+]{43}=\.[\w\d]+)/
 
 function isIP (s) {
   return ip.isV4Format(s) || ip.isV6Format(s)
@@ -38570,25 +38648,21 @@ function isObject (o) {
   return o && 'object' === typeof o && !Array.isArray(o)
 }
 
-var linkRegex = exports.linkRegex = /^(@|%|&)[A-Za-z0-9\/+]{43}=\.[\w\d]+$/
 var isLink = exports.isLink =
   function (data) {
     return isString(data) && linkRegex.test(data)
   }
 
-var feedIdRegex = exports.feedIdRegex = /^@[A-Za-z0-9\/+]{43}=\.(?:sha256|ed25519)$/
 var isFeedId = exports.isFeed = exports.isFeedId =
   function (data) {
     return isString(data) && feedIdRegex.test(data)
   }
 
-var msgIdRegex = exports.msgIdRegex = /^%[A-Za-z0-9\/+]{43}=\.sha256$/
 var isMsgId = exports.isMsg = exports.isMsgId =
   function (data) {
     return isString(data) && msgIdRegex.test(data)
   }
 
-var blobIdRegex = exports.blobIdRegex = /^&[A-Za-z0-9\/+]{43}=\.sha256$/
 var isBlobId = exports.isBlob = exports.isBlobId =
   function (data) {
     return isString(data) && blobIdRegex.test(data)
@@ -38597,14 +38671,13 @@ var isBlobId = exports.isBlob = exports.isBlobId =
 var normalizeChannel = exports.normalizeChannel =
   function (data) {
     if (typeof data === 'string') {
-      data = data.toLowerCase().replace(/\s/g, '')
+      data = data.toLowerCase().replace(/\s|,|\.|\?|!|<|>|\(|\)|\[|\]|"|#/g, '')
       if (data.length > 0 && data.length < 30) {
         return data
       }
     }
   }
 
-var multiServerAddressRegex = /^\w+\:.+~shs\:/
 var parseMultiServerAddress = function (data) {
   if(!isString(data)) return false
   if(!multiServerAddressRegex.test(data)) return false
@@ -38615,7 +38688,7 @@ var parseMultiServerAddress = function (data) {
   if(data.length != 2) return false
   if(!(data[0].length >= 3)) return false
   if(!(data[1].length == 2 || data[1].length == 3)) return false
-  if(data[0][0] !== 'net' && data[0][0] !== 'onion') return false
+  if(!protocolRegex.test(data[0][0])) return false
   if(data[1][0] !== 'shs') return false
 
   var port = +data[0][data[0].length - 1] //last item is port, handle ipv6
@@ -38707,7 +38780,10 @@ function parseLegacyInvite (invite) {
   var parts = invite.split('~')
   var addr = toAddress(parts[0])//.split(':')
   //convert legacy code to multiserver invite code.
-  var remote = 'net:'+addr.host+':'+addr.port+'~shs:'+addr.key.slice(1, -8)
+  var protocol = 'net:'
+  if (addr.host.endsWith(".onion"))
+    protocol = 'onion:'
+  var remote = protocol+addr.host+':'+addr.port+'~shs:'+addr.key.slice(1, -8)
   invite = remote+':'+parts[1]
   return {
     invite: remote + ':' + parts[1],
@@ -38718,7 +38794,6 @@ function parseLegacyInvite (invite) {
   }
 }
 
-var multiServerInviteRegex = /^(net|wss?)$/
 function parseMultiServerInvite (invite) {
 
   var redirect = invite.split('#')
@@ -38730,7 +38805,7 @@ function parseMultiServerInvite (invite) {
   .map(function (e) { return e.split(':') })
 
   if(parts.length !== 2) return null
-  if(!multiServerInviteRegex.test(parts[0][0])) return null
+  if(!protocolRegex.test(parts[0][0])) return null
   if(parts[1][0] !== 'shs') return null
   if(parts[1].length !== 3) return null
   var p2 = invite.split(':')
@@ -38773,7 +38848,6 @@ exports.type =
     return false
   }
 
-var extractRegex = /([@%&][A-Za-z0-9\/+]{43}=\.[\w\d]+)/
 exports.extract =
   function (data) {
     if (!isString(data))
@@ -38787,6 +38861,7 @@ exports.extract =
     var res = extractRegex.exec(_data)
     return res && res[0]
   }
+
 
 
 },{"ip":425,"is-valid-domain":209}],425:[function(require,module,exports){
@@ -39457,6 +39532,7 @@ Stream.prototype.pipe = function(dest, options) {
 },{"events":176,"inherits":205,"readable-stream/duplex.js":377,"readable-stream/passthrough.js":386,"readable-stream/readable.js":387,"readable-stream/transform.js":388,"readable-stream/writable.js":389}],428:[function(require,module,exports){
 (function (global){
 var ClientRequest = require('./lib/request')
+var IncomingMessage = require('./lib/response')
 var extend = require('xtend')
 var statusCodes = require('builtin-status-codes')
 var url = require('url')
@@ -39502,6 +39578,9 @@ http.get = function get (opts, cb) {
 	return req
 }
 
+http.ClientRequest = ClientRequest
+http.IncomingMessage = IncomingMessage
+
 http.Agent = function () {}
 http.Agent.defaultMaxSockets = 4
 
@@ -39536,9 +39615,13 @@ http.METHODS = [
 	'UNSUBSCRIBE'
 ]
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./lib/request":430,"builtin-status-codes":100,"url":445,"xtend":453}],429:[function(require,module,exports){
+},{"./lib/request":430,"./lib/response":431,"builtin-status-codes":100,"url":445,"xtend":453}],429:[function(require,module,exports){
 (function (global){
 exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream)
+
+exports.writableStream = isFunction(global.WritableStream)
+
+exports.abortController = isFunction(global.AbortController)
 
 exports.blobConstructor = false
 try {
@@ -39651,9 +39734,8 @@ var ClientRequest = module.exports = function (opts) {
 
 	var preferBinary
 	var useFetch = true
-	if (opts.mode === 'disable-fetch' || 'timeout' in opts) {
-		// If the use of XHR should be preferred and includes preserving the 'content-type' header.
-		// Force XHR to be used since the Fetch API does not yet support timeouts.
+	if (opts.mode === 'disable-fetch' || ('requestTimeout' in opts && !capability.abortController)) {
+		// If the use of XHR should be preferred. Not typically needed.
 		useFetch = false
 		preferBinary = true
 	} else if (opts.mode === 'prefer-streaming') {
@@ -39715,7 +39797,9 @@ ClientRequest.prototype._onFinish = function () {
 	var headersObj = self._headers
 	var body = null
 	if (opts.method !== 'GET' && opts.method !== 'HEAD') {
-		if (capability.blobConstructor) {
+		if (capability.arraybuffer) {
+			body = toArrayBuffer(Buffer.concat(self._body))
+		} else if (capability.blobConstructor) {
 			body = new global.Blob(self._body.map(function (buffer) {
 				return toArrayBuffer(buffer)
 			}), {
@@ -39742,12 +39826,28 @@ ClientRequest.prototype._onFinish = function () {
 	})
 
 	if (self._mode === 'fetch') {
+		var signal = null
+		if (capability.abortController) {
+			var controller = new AbortController()
+			signal = controller.signal
+			self._fetchAbortController = controller
+
+			if ('requestTimeout' in opts && opts.requestTimeout !== 0) {
+				global.setTimeout(function () {
+					self.emit('requestTimeout')
+					if (self._fetchAbortController)
+						self._fetchAbortController.abort()
+				}, opts.requestTimeout)
+			}
+		}
+
 		global.fetch(self._opts.url, {
 			method: self._opts.method,
 			headers: headersList,
 			body: body || undefined,
 			mode: 'cors',
-			credentials: opts.withCredentials ? 'include' : 'same-origin'
+			credentials: opts.withCredentials ? 'include' : 'same-origin',
+			signal: signal
 		}).then(function (response) {
 			self._fetchResponse = response
 			self._connect()
@@ -39775,10 +39875,10 @@ ClientRequest.prototype._onFinish = function () {
 		if (self._mode === 'text' && 'overrideMimeType' in xhr)
 			xhr.overrideMimeType('text/plain; charset=x-user-defined')
 
-		if ('timeout' in opts) {
-			xhr.timeout = opts.timeout
+		if ('requestTimeout' in opts) {
+			xhr.timeout = opts.requestTimeout
 			xhr.ontimeout = function () {
-				self.emit('timeout')
+				self.emit('requestTimeout')
 			}
 		}
 
@@ -39874,8 +39974,8 @@ ClientRequest.prototype.abort = ClientRequest.prototype.destroy = function () {
 		self._response._destroyed = true
 	if (self._xhr)
 		self._xhr.abort()
-	// Currently, there isn't a way to truly abort a fetch.
-	// If you like bikeshedding, see https://github.com/whatwg/fetch/issues/27
+	else if (self._fetchAbortController)
+		self._fetchAbortController.abort()
 }
 
 ClientRequest.prototype.end = function (data, encoding, cb) {
@@ -39958,13 +40058,40 @@ var IncomingMessage = exports.IncomingMessage = function (xhr, response, mode) {
 		self.statusCode = response.status
 		self.statusMessage = response.statusText
 		
-		response.headers.forEach(function(header, key){
+		response.headers.forEach(function (header, key){
 			self.headers[key.toLowerCase()] = header
 			self.rawHeaders.push(key, header)
 		})
 
+		if (capability.writableStream) {
+			var writable = new WritableStream({
+				write: function (chunk) {
+					return new Promise(function (resolve, reject) {
+						if (self._destroyed) {
+							return
+						} else if(self.push(new Buffer(chunk))) {
+							resolve()
+						} else {
+							self._resumeFetch = resolve
+						}
+					})
+				},
+				close: function () {
+					if (!self._destroyed)
+						self.push(null)
+				},
+				abort: function (err) {
+					if (!self._destroyed)
+						self.emit('error', err)
+				}
+			})
 
-		// TODO: this doesn't respect backpressure. Once WritableStream is available, this can be fixed
+			try {
+				response.body.pipeTo(writable)
+				return
+			} catch (e) {} // pipeTo method isn't defined. Can't find a better way to feature test this
+		}
+		// fallback for when writableStream or pipeTo aren't available
 		var reader = response.body.getReader()
 		function read () {
 			reader.read().then(function (result) {
@@ -39977,11 +40104,11 @@ var IncomingMessage = exports.IncomingMessage = function (xhr, response, mode) {
 				self.push(new Buffer(result.value))
 				read()
 			}).catch(function(err) {
-				self.emit('error', err)
+				if (!self._destroyed)
+					self.emit('error', err)
 			})
 		}
 		read()
-
 	} else {
 		self._xhr = xhr
 		self._pos = 0
@@ -40025,7 +40152,15 @@ var IncomingMessage = exports.IncomingMessage = function (xhr, response, mode) {
 
 inherits(IncomingMessage, stream.Readable)
 
-IncomingMessage.prototype._read = function () {}
+IncomingMessage.prototype._read = function () {
+	var self = this
+
+	var resolve = self._resumeFetch
+	if (resolve) {
+		self._resumeFetch = null
+		resolve()
+	}
+}
 
 IncomingMessage.prototype._onXHRProgress = function () {
 	var self = this
